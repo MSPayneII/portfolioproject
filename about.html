@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>About Me</title>
+  </head>
+  <body>
+    <header>
+      <div class="skip"><a href="#main">Skip to Main Content</a></div>
+
+      <div id="navigation">
+        <div id="logo">
+          <h1>Michael S. Payne II</h1>
+          <h2>User Experience Researcher and Information Designer</h2>
+        </div>
+        <nav>
+          <ul class="nav_links">
+            <li class="nav_item"><a href="index.html">HOME</a></li>
+            <li class="nav_item"><a href="mypsych.html">MYPSYCH</a></li>
+            <li class="nav_item"><a href="websitecomparison.html">WEBCOMP</a></li>
+            <li class="nav_item"><a class="current" href="about.html">ABOUT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <div class="container">
+
+        <!-- adapted this code from w3schools flip card demo -->
+        <div class="flip">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <img src="images/profilepic.jpg" alt="Photo of myself" class="bio_photo" style="height:350px;width:350px;">
+            </div>
+            <div class="flip-back"></div>
+          </div>
+        </div>
+
+        <div class="bio">
+          <h1>Hello, I'm Michael!</h1>
+          <p>I'm pursing a Masters in Information at the University of Michigan. I aspire to be a UX Researcher and Information Designer. I'm currently working as a Laboratory Coordinator for a marketing research lab while I attend school. My goal is to utilize research to create enjoyable experiences for users in hopes of making their lives easier. My core interest are: UX research, UX Design and Mental Health.</p>
+        </div>
+
+
+        <div class="interest_board">
+          <h2 class="section_title">My Interest Board</h2>
+        </div>
+        <!-- I got this code template from w3schools -repsonsive image grid example -->
+        <div class="gallery">
+          <div class="column">
+            <img id="image1" src="images/hookgrip_logo_2.png" alt="Olympic Weightlifting Logo"/>
+            <img id="image2" src="images/justiceleague.jpeg" alt="Justice League Comicbook Cover"/>
+            <img id="image3" src="images/keyboard.jpg" alt="Keyboard shown in grayscale"/>
+          </div>
+          <div class="column">
+            <img id="image4" src="images/megaman2.jpeg" alt="Mega Man 2 Video Game Cover">
+            <img id="image5" src="images/wheeloftimebookcover.jpg" alt="Wheel of Time Book Cover"/>
+
+          </div>
+
+          <div class="column">
+            <img id="image6" src="images/residentevil.jpeg" alt="Resident Evil Video Game Cover"/>
+            <img id="image7" src="images/travelbag.jpeg" alt="Picture of a Travelbag"/>
+            <img id="image8" src="images/streetfighter.png" alt="Street Fighter Video Game Cover"/>
+            <img id="image9" src="images/martialarts.png" alt="Black and White Silhouette of a Martial Artist Punching Air"/>
+
+          </div>
+        </div>
+
+
+        <!-- code adapted from form discussion assignment -->
+
+        <form class="contact_form" action="https://formspree.io/mnqqpbjl" method="post">
+          <fieldset>
+            <legend><h2 class="section_title">Feel free to contact me!</h2></legend>
+
+            <div class="form-group">
+              <div>
+                <input name="name" type="text" placeholder="Enter First Name" class="form-control" aria-label="first name text field">
+              </div>
+            </div>
+            <div class="form-group">
+              <div>
+                <input name="name" type="text" placeholder="Enter Last Name" class="form-control" aria-label="first name text field">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div>
+                <input name="email" type="text" placeholder="Enter Email Address" class="form-control" aria-label="first name text field">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div>
+                <textarea class="form-control" name="message" placeholder="Write a Message" aria-label="first name text field"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div>
+                <button type="submit" class="submit_button">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p>2019 Site Developed by Michael S. Payne II for SI539 </p>
+    </footer>
+  </body>
+</html>

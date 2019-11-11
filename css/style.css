@@ -1,0 +1,560 @@
+
+
+/* define variables for the root element */
+:root{
+  --global-background-color: white;
+  --global-text-color: black;
+  --global-head-font: 'futura-pt', serif;
+  --global-text-font: 'proxima-nova', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*:focus{
+  outline: 3px solid royalblue; /*puts a 3px black border around all elements in focus.*/
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--global-text-font);
+  font-size: 18px;
+  font-weight: 400;
+  background-color: var(--global-background-color);
+  color: var(--global-text-color);
+}
+
+body h1,h2,h3,h4,footer{
+  font-family: var(--global-head-font);
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .06em;
+}
+
+h1 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-size: 2em;
+
+}
+h2 {
+
+  font-size: 1.3em;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+p {
+  font-style: normal;
+  /* font-weight: 400; */
+  line-height: 1.8em;
+  margin: 0 0 1em;
+}
+
+ul{
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.8em;
+}
+
+figure{
+  text-align: center;
+}
+
+footer p{
+  font-size: 1.5em;
+}
+
+fieldset{
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+textarea{
+  overflow:auto;
+  vertical-align: top;
+  -webkit-writing-mode: horizontal-tb;
+  writing-mode: horizontal-tb;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  display:inline-block;
+  text-align:left;
+}
+
+a{
+  line-height: 40px;
+  font-weight: 400;
+  color: var(--global-text-color);
+  text-decoration: none;
+  }
+
+
+a:hover{
+  font-weight: bold;
+  color: royalblue;
+}
+
+.current{
+  color: purple;
+  font-weight: bold;
+}
+
+
+.nav_links{
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+    flex-direction: column;
+  -webkit-box-pack: justify;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    align-items: center;
+  list-style: none;
+  font-weight:300;
+}
+
+.nav_item {
+  padding: 10px;
+  font-weight: 500;
+}
+
+.intro{
+  margin: 0;
+  padding: 50px 20px 20px 0px;
+  line-height: 1.7em;
+
+}
+
+.intro h1{
+  padding: 0px 20px 20px 0px;
+  text-align: center;
+}
+
+.section_title, .withinsection_title{
+  padding-bottom: 10px;
+}
+
+
+.project p{
+  display: none;
+}
+
+.project_title{
+  line-height: 1.5em;
+  font-size: 1.5em;
+  text-align: center;
+  padding-bottom: 2px;
+  font-size: 1.3em;
+}
+.projectheader{
+  text-align: center;
+  padding: 50px 20px 25px 20px;
+  line-height: 1.7em;
+}
+
+.project_pic{
+  max-height: 65%;
+  max-width: 65%;
+}
+
+.project_thumbnail {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius:10px;
+  border-radius: 10px;
+}
+
+.header_pic1{
+  background-image: url(../images/mypsychpic.jpg);
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size:cover;       /* Parallax effect */
+  color: white;
+  height: 400px;                /* Parallax effect */
+  -webkit-border-raius: 8px;
+  border-radius: 8px;
+  margin-top: 10px;
+  border:1px solid darkgrey;
+  max-width:100%;
+}
+
+.header_pic2{
+  background-image: url(../images/businessschoolwebsite.jpg);
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 400px;                /* Parallax effect */
+  -webkit-border-raius: 8px;
+  border-radius: 8px;
+  margin-top: 10px;
+  border: 1px solid darkgrey;
+  max-width:100%;
+}
+
+.myprojects{
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+    flex-direction: column;
+  -webkit-box-pack: justify;
+    justify-content: space-between;
+  -webkit-box-align: center;
+    align-items: center;
+  background: var(--global-background-color);
+  margin: 0;
+  padding: 0px 20px 40px 20px;
+}
+
+/* code to place skip to content off screen until users uses tab */
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute; /*position relative to the parent */;
+  top: -200px;    /*place 200px higher */;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip a:focus{
+  top:0;
+}
+
+.interest_board, .contact_form{
+  text-align: center;
+  font-size: 1.7em;
+  font-weight:600;
+  padding: 80px 20px 20px 20px;
+}
+
+
+
+/* adapted from form discussion */
+.submit_button{
+  display: block;
+  margin: 0 auto;
+  background-color: var(--global-text-color);
+  border: none;
+  font-weight: 600;
+  line-height: 1.2em;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  min-width: 40%;
+}
+
+
+.form-group{
+  padding: 5px;
+}
+
+.form-group input{
+  width:90%
+}
+
+
+.form-group textarea{
+  min-height: 200px;
+  resize: horizontal;
+  width: 90%;
+}
+
+.form-control {
+  display: block;
+  max-width: 100%;
+  max-height: 26px;
+  padding: 6px 12px;
+  font-size: .8em;
+  line-height: 1.2em;
+  color: black;
+  font-weight: 600;
+  background-color: white;
+  background-image: none;
+  border: 1px solid darkgray;
+  -webkit-border-raius:8px;
+  border-radius: 8px;
+
+}
+.gallery{
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 500px;
+  justify-content: center;
+  align-items:baseline;
+}
+
+.column{
+  -webkit-flex:100%;
+  flex:100%;
+  max-width:100%;
+  margin: 20px;
+}
+.column img{
+  border: 2px whitesmoke solid;
+  width: 100%;
+  vertical-align: top;
+  -webkit-border-raius:15px;
+  border-radius: 15px;
+}
+
+.column img:hover{
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+
+.container{
+  overflow: hidden;
+  margin:auto;
+  width:85%;
+}
+
+/* adapted code from w3schools flip card demo */
+.flip{
+  background-color: transparent;
+  width: 350px;
+  height: 350px;
+  perspective: 1000px;
+  padding: 40px 20px 40px 0px;
+}
+/* adapted code from w3schools flip card demo */
+.flip-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: transform 0.6s;
+  -moz-transition: transform 0.6s;
+  -ms-transition: transform 0.6s;
+  -o-transition: transform 0.6s;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+
+}
+/* adapted code from w3schools flip card demo */
+.flip:hover .flip-inner{
+  transform: rotateY(180deg);
+}
+/* adapted code from w3schools flip card demo */
+.flip-front, .flip-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+/* adapted code from w3schools flip card demo */
+.flip-front{
+  color: black;
+}
+/* adapted code from w3schools flip card demo */
+.flip-back{
+  background-color: darkgray;
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+  -webkit-border-raius:8px;
+  border-radius: 8px;
+  background-image: url(../images/profilepic.jpg);
+  background-repeat: no-repeat;
+  background-size:contain;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.bio_photo{
+  max-width:95%;
+  height: auto;
+  -webkit-border-raius:8px;
+  border-radius: 8px;
+}
+
+#navigation{
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+    flex-direction: column;
+  -webkit-box-pack: justify;
+    justify-content: space-between;
+  -webkit-box-align: center;
+    align-items: center;
+  background: var(--global-background-color);
+  border-bottom: 1px solid darkgrey;
+}
+
+
+#logo {
+  margin: 10px 0 0;
+  padding: 10px;
+  text-align: left;
+  font-weight: 400;
+}
+
+#logo h1 {
+  font-size: 2em;
+  padding: 10px;
+  text-align: center;
+}
+
+#logo h2 {
+  font-size: 1em;
+  text-align: center;
+  display: none;
+}
+
+
+footer{
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  padding: 30px;
+  grid-column: 1 / -1;
+  grid-row: 7 / auto;
+  padding: 30px;
+  text-align: center;
+  min-width: 100px;
+}
+
+@media screen and (min-width:600px) {
+
+  #navigation{
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+  }
+
+  .nav_links{
+    -webkit-box-orient: horizontal;
+      flex-direction: row;
+  }
+
+  .nav_item{
+    text-align: center;
+  }
+  .intro{
+    padding: 50px 20px 0px 20px;
+    line-height: 1.7em;
+  }
+
+  .intro h1{
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .study_details{
+    display:inline;
+    width: 50%;
+  }
+
+  .project_title{
+    padding: 25px 0px 5px 2px;
+    font-size: 1.7em;
+  }
+
+  .project p{
+    display:block;
+    text-align: center;
+  }
+
+
+  #logo {
+    padding: 30px;
+    text-align: center;
+  }
+
+  #logo h2{
+    display: block;
+  }
+
+  .column{
+    -webkit-flex: 50%;
+    flex: 50;
+    max-width: 50%;
+  }
+  .myprojects{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+      flex-direction: column;
+    -webkit-box-pack: justify;
+      justify-content: space-around;
+    -webkit-box-align: center;
+      align-items: center;
+  }
+}
+
+@media screen and (min-width:900px) {
+
+  .nav_links li {
+    padding: 15px;
+
+  }
+
+  .myprojects h1, .myprojects p{
+    display: block;
+  }
+
+
+  .myprojects{
+    -webkit-box-orient: horizontal;
+      flex-direction: row;
+      justify-content: space-around;
+      -webkit-flex: 50%;
+      flex: 50%;
+      max-width: 100%;
+      padding: 20px;
+  }
+
+  .project{
+    padding: 20px;
+  }
+
+}
+
+
+/* code taken from homework assignment 4 */
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -200px;
+    -webkit-transition: none;
+    transition: none;
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+
+}
